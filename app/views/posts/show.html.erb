@@ -1,0 +1,28 @@
+<el-row id='show_markdown' :gutter='20' justify='center' type='flex'>
+  <el-col :md='14' :xs='24' :sm='18'>
+    <!-- document start here -->
+    <% if user_signed_in? %>
+    <el-row  justify='start' type='flex' :gutter='20'>
+      <el-col class='hidden-xs-only' :xs='10' :lg='4' :md='4' :sm='5'>
+        <el-button @click='window.location=`/posts/${post_id}/edit`' icon='el-icon-edit' type='plain' round>Chỉnh sửa</el-button>
+      </el-col>
+      <el-col class='hidden-xs-only' :offset='2' :lg='5' :sm='5' :md='4' :xs='10'>
+        <el-button icon='el-icon-delete' @click='delete_post' type='danger' round>Xóa</el-button>
+      </el-col>
+    </el-row>
+    <% end %>
+    <el-row  justify='end' type='flex' :gutter='20'>
+      <el-col :xs='24' :sm='24'>
+        <h1 id='post-title'><%= @post.title %></h1>
+      </el-col>
+    </el-row>
+    <!-- main content goes here -->
+    <el-row  justify='end' type='flex' :gutter='20'>
+      <el-col :xs='24' :sm='24'>
+        <div id='main-content'>
+          <%= raw markdown @post.body %>
+        </div>
+      </el-col>
+    </el-row>
+  </el-col>
+</el-row>

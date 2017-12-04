@@ -1,0 +1,24 @@
+<div id='index'>
+  <el-row type='flex' justify='center' :gutter='20'>
+    <el-col :sm='14' :xs='22'>
+      <el-row type='flex' justify='end' :gutter='20'>
+        <el-col id='main-content' :xs='22' :sm='18'>
+          <% @posts.each_with_index do |post,index| %>
+            <el-row  class='post-title' :gutter='20'>
+              <el-col :span='3'>
+                <span class='post-order'><%= index + 1%></span>
+              </el-col>
+              <el-col :span='20'>
+                <%= link_to post.title, post_path(post) %>
+              </el-col>
+            </el-row>   
+          <% end %>
+        </el-col>
+      </el-row>
+    </el-col>
+  </el-row>
+  <el-row id='pagination-area' type='flex' justify='center' :gutter='20'>
+    <el-pagination :current-page='<%= @current_page %>' @current-change='redirect_to' layout="prev, pager, next" :total="<%= Post.count / 20 + @count %>">
+    </el-pagination>
+  </el-row>
+</div>

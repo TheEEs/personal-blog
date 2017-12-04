@@ -1,0 +1,140 @@
+@mixin Montserrat-font {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin Muli-font{
+    font-family: 'Muli', sans-serif;
+}
+@mixin Nunito-font {
+    font-family: 'Nunito', sans-serif;
+}
+@mixin Josefin-Sans-font {
+    font-family: 'Josefin Sans', sans-serif;
+}
+@mixin Catamaran-font{
+    font-family: 'Catamaran', sans-serif;
+}
+@mixin Varela-Round-font{
+    font-family: 'Varela Round', sans-serif;
+}
+#show_markdown{
+    #post-title{
+        @include Montserrat-font();
+        font-size:1.21rem;
+        line-height: 50px;
+        margin-bottom: 50px;
+    }
+    #post-title::before{
+        content: '#.';
+    }
+    #main-content{
+        h1,h2,h3,h4,h5,h6{
+            @include Muli-font();
+        }
+    }
+    p{
+        margin-left: 3px;
+        margin-right: 3px;
+        @include Varela-Round-font();
+        font-size:15px;
+    }
+    a{
+        color:#3498db;
+    }
+    a:hover{
+        background-color: transparent;
+        color: #2980b9;
+    }
+    blockquote{
+        background-color: #ecf0f1;
+        margin: 0 0 0 0;
+        padding: 10px 3px 10px 12px;
+        border-style: solid;
+        border-width: 0 0 0 0;
+        border-left-width: 3px;
+        border-left-color: #e74c3c;
+        p{
+            @include Catamaran-font();
+            font-size: 15px;
+        }
+    }
+    p code{
+        background-color:#ecf0f1;
+        padding: 2px 4px 2px 4px;
+        border-radius: 15px;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 94%;
+    }
+    pre{
+        padding: 0 0 0 0;
+        code{
+            margin: 0 0 0 0;
+        }
+    }
+    table{
+        @include Muli-font();
+        background-color:rgba($color: #ecf0f1, $alpha: 0.4);
+        max-width:85%;
+        min-width: 60%;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        tbody tr:nth-child(odd){
+            background-color:rgba($color: #bdc3c7, $alpha: 0.27);
+        }
+    }
+    ul{
+        @include Varela-Round-font();
+        list-style-type: circle;
+        font-size:14px;
+        
+    }
+}
+#index{
+    #pagination-area{
+        margin-top:38px;
+    }
+    #main-content{
+        a{
+            text-decoration: none;
+            @include Montserrat-font();
+            font-weight: bolder;
+            font-size: 17px;
+        }
+        .post-title{
+            margin-top:18px;
+        }
+        span.post-order{
+            @include Nunito-font();
+            padding: 7px 10px 7px 10px;
+            border-radius: 7px;
+            background-color: #f39c12;
+            color:white;
+        }
+    }
+}
+
+#edit{
+    #post-title{
+        @include Muli-font();
+        font-weight: bold;
+    }
+    #edit-header{
+        @include Montserrat-font();
+    }
+    label{
+        @include Nunito-font();
+        font-weight: bold;
+    }
+    #markdown-content{
+        height: 65vh;
+        resize: none;
+    }
+    #submit-button{
+        @include Varela-Round-font();
+    }
+}

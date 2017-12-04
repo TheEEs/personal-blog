@@ -1,0 +1,422 @@
+/* line 20, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown #post-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.21rem;
+  line-height: 50px;
+  margin-bottom: 50px;
+}
+/* line 26, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown #post-title::before {
+  content: '#.';
+}
+/* line 30, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown #main-content h1, #show_markdown #main-content h2, #show_markdown #main-content h3, #show_markdown #main-content h4, #show_markdown #main-content h5, #show_markdown #main-content h6 {
+  font-family: 'Muli', sans-serif;
+}
+/* line 34, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown p {
+  margin-left: 3px;
+  margin-right: 3px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+}
+/* line 40, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown a {
+  color: #3498db;
+}
+/* line 43, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown a:hover {
+  background-color: transparent;
+  color: #2980b9;
+}
+/* line 47, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown blockquote {
+  background-color: #ecf0f1;
+  margin: 0 0 0 0;
+  padding: 10px 3px 10px 12px;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-left-width: 3px;
+  border-left-color: #e74c3c;
+}
+/* line 55, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown blockquote p {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 15px;
+}
+/* line 60, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown p code {
+  background-color: #ecf0f1;
+  padding: 2px 4px 2px 4px;
+  border-radius: 15px;
+}
+/* line 65, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 94%;
+}
+/* line 71, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown pre {
+  padding: 0 0 0 0;
+}
+/* line 73, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown pre code {
+  margin: 0 0 0 0;
+}
+/* line 77, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown table {
+  font-family: 'Muli', sans-serif;
+  background-color: rgba(236, 240, 241, 0.4);
+  max-width: 85%;
+  min-width: 60%;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+/* line 86, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown table tbody tr:nth-child(odd) {
+  background-color: rgba(189, 195, 199, 0.27);
+}
+/* line 90, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#show_markdown ul {
+  font-family: 'Varela Round', sans-serif;
+  list-style-type: circle;
+  font-size: 14px;
+}
+
+/* line 98, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#index #pagination-area {
+  margin-top: 38px;
+}
+/* line 102, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#index #main-content a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 17px;
+}
+/* line 108, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#index #main-content .post-title {
+  margin-top: 18px;
+}
+/* line 111, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#index #main-content span.post-order {
+  font-family: 'Nunito', sans-serif;
+  padding: 7px 10px 7px 10px;
+  border-radius: 7px;
+  background-color: #f39c12;
+  color: white;
+}
+
+/* line 122, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#edit #post-title {
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+}
+/* line 126, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#edit #edit-header {
+  font-family: 'Montserrat', sans-serif;
+}
+/* line 129, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#edit label {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+/* line 133, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#edit #markdown-content {
+  height: 65vh;
+  resize: none;
+}
+/* line 137, /home/docker/my_blog/app/assets/stylesheets/posts.scss */
+#edit #submit-button {
+  font-family: 'Varela Round', sans-serif;
+}
+/* line 1, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 48, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 53, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 57, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 63, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 71, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 82, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 88, /home/docker/my_blog/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+
+ html{
+     width: 100%;
+     font-size: 27pt;
+ }
+ body{
+     margin: 0 0 0 0;
+     overflow-x: hidden;
+     line-height: 33px;
+ }
+
+ #app-header{
+    background-color: #e74c3c;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif ;
+    cursor: pointer;
+ }
+#app-header img{
+    width: 23px;
+    margin-top:20px;
+}
+#app-header #logo{
+    margin-right: 15px;
+}
+
+#app-header a{
+    margin-top: 50px !important;
+    color:white;
+}
+#app-header a:hover{
+    color: #bdc3c7;
+    background-color: transparent;
+}
+#app-header a:active{
+    color:white;
+}
+
+#user_signin{
+    margin-top: 57.7px;
+}
+
+#user_signin h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#user_signin label{
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+}
+
+#user_signin button{
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
+
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #1E1E1E;
+  color: #DCDCDC;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-name {
+  color: #569CD6;
+}
+.hljs-link {
+  color: #569CD6;
+  text-decoration: underline;
+}
+
+.hljs-built_in,
+.hljs-type {
+  color: #4EC9B0;
+}
+
+.hljs-number,
+.hljs-class {
+  color: #B8D7A3;
+}
+
+.hljs-string,
+.hljs-meta-string {
+  color: #D69D85;
+}
+
+.hljs-regexp,
+.hljs-template-tag {
+  color: #9A5334;
+}
+
+.hljs-subst,
+.hljs-function,
+.hljs-title,
+.hljs-params,
+.hljs-formula {
+  color: #DCDCDC;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #57A64A;
+  font-style: italic;
+}
+
+.hljs-doctag {
+  color: #608B4E;
+}
+
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-tag {
+  color: #9B9B9B;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #BD63C5;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-builtin-name {
+  color: #9CDCFE;
+}
+
+.hljs-section {
+  color: gold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/*.hljs-code {
+  font-family:'Monospace';
+}*/
+
+.hljs-bullet,
+.hljs-selector-tag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #D7BA7D;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  display: inline-block;
+  width: 100%;
+}

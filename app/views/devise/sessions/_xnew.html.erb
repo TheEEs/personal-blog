@@ -1,0 +1,23 @@
+<div id='user_signin'>
+  <el-row :gutter='20' type='flex' justify='center'>
+    <el-col :xs='22' :sm='14' :md='8' :lg='8'>
+      <el-form action='/users/sign_in' method='post' id='login-form' ref="form"  label-width="120px">
+      <input name="utf8" type="hidden" value="✓" />
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <el-form-item label="E-mail">
+          <el-input name='user[email]'><el-input>
+        </el-form-item>
+         <el-form-item label="Mật khẩu">
+          <el-input type='password' name='user[password]'><el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-switch active-value="1" inactive-value="0"  name='user[remember_me]' v-model='remember_me' active-text="Ghi nhớ đăng nhập"
+          active-color="#2ecc71"  inactive-color="#bdc3c7"><el-switch>
+        </el-form-item>
+        <%= check_box_tag :xaml %>
+         <el-form-item>
+            <el-button type='success' @click='$("#login-form").submit()' round>Đăng nhập</el-button>
+        </el-form-item>
+      </el-form>  
+    </el-row>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheEEs'sLog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>   
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.0.5/lib/theme-chalk/display.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.5/vue.min.js'></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Muli" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Josefin+Sans|Montserrat|Muli|Nunito|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  </head>
+
+  <body>
+    <el-container id='app'>
+      <el-header id='app-header'>
+        <el-row type='flex' justify='end' :gutter='20'>
+          <el-col id='logo' :span='1'>
+            <%= image_tag 'heart.png' %>
+          </el-col>
+          <el-col :xs='20' :sm='20' :md='9' :lg='9' >
+            <h1 @click='redirect_to_root'>Tran Dat's blog</h1>
+          </el-col>
+          <el-col class='nav-buttons hidden-sm-and-down' :span='5'>
+            <el-row :gutter='20' type='flex' justify='end'>
+              <% if user_signed_in? %>
+                <el-button icon='el-icon-circle-plus' type='success' round @click='new_post_page'>Bài mới</el-button>
+              <% end %>
+            </el-row>
+          </el-col>
+          <el-col class='nav-buttons hidden-sm-and-down' :offset='1' :span='4'>
+            <el-row :gutter='20' type='flex' justify='start'>
+              <% if user_signed_in? %>
+                <el-button type='plain' round @click='logout'>Đăng xuất</el-button>
+              <% else %>
+                <el-button type='warning' round @click='login_page'>Đăng nhập</el-button>
+              <% end %>
+            </el-row>
+          </el-col>
+        </el-row>
+      </el-header>
+
+      <el-main>
+        <%= yield %>
+      </el-main>
+    </el-container>
+    <script>
+      $(function(){
+        var app = apply_vue_ui('<%= j @post&.title %>','<%= raw j @post&.body%>', '<%= @post&.id %>', <%= @post&.public == 'on' %>);
+        app.$mount('#app');
+      })      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<div id='edit'>
+  <el-row type='flex' :gutter='20' justify='center'>
+    <el-col :md='14' :xs='24' :sm='18'>
+      <el-row :gutter='20'  id='edit-header'>
+        <el-col :span='20' :offset='1'>
+          <h1>Chỉnh sửa</h1>
+        </el-col>
+      </el-row>
+      <el-row :gutter='20'>
+        <el-col :span='22' :offset='1'>
+          <%= render partial:'form', locals:{ action_path: post_path(@post), method:'patch' } %>
+        </el-row>
+      </el-row>
+    </el-col>
+  </el-row>
+</div>
